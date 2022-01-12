@@ -1,8 +1,14 @@
 const cores = document.getElementsByClassName('color');
 const input = document.getElementById('board-size');
+const corPalet = document.getElementById('color-palette');
+const btnGerarPalet = document.getElementById('gerar-palet');
+const inputGerarPalet = document.getElementById('input-gerar-palet');
 const minumum = 5;
-const maximum = 50;
+const maximum = 33;
+const minumumPalet = 5;
+const maximumPalet = 10;
 const rgb = 'rgb(255,255,255)';
+let qtdPalet = minumumPalet;
 
 const quadroPixel = document.getElementById('pixel-board');
 const btn = document.querySelector('#clear-board');
@@ -19,10 +25,17 @@ function createBox(linhas, colunas) {
   }
 }
 
+function gerarPaletCores(number) {
+  for(let index = 0; index < number; index += 1) {
+    const div = document.createElement('div');
+    div.className = 'color';
+    corPalet.appendChild(div);
+  }
+}
+
 function removeAll() {
-  const div = document.getElementById('pixel-board');
-  while (div.firstChild) {
-    div.removeChild(div.lastChild);
+  while (quadroPixel.firstChild) {
+    quadroPixel.removeChild(quadroPixel.lastChild);
   }
 }
 
@@ -60,7 +73,6 @@ btnGerar.addEventListener('click', () => {
     input.value = maximum;
   }
   numberLines(numberOfLines);
-  console.log(numberOfLines);
 });
 
 function trocaCor(event) {
@@ -98,10 +110,11 @@ function clearQuadro() {
   boxClear();
 }
 
-cores[0].addEventListener('click', trocaCor);
-cores[1].addEventListener('click', trocaCor);
-cores[2].addEventListener('click', trocaCor);
-cores[3].addEventListener('click', trocaCor);
+function gerandoBotoesCores(number) {
+  for (let index = 0; index < number; index += 1) {
+    cores[index].addEventListener('click', trocaCor);
+  }
+}
 
 quadroPixel.addEventListener('click', pintaGrid);
 
@@ -115,7 +128,45 @@ function gerarCor(opacidade = 1) {
   return `rgba(${r}, ${g}, ${b}, ${opacidade})`;
 }
 
-cores[0].style.background = 'black';
-cores[1].style.background = gerarCor();
-cores[2].style.background = gerarCor();
-cores[3].style.background = gerarCor();
+function gerandoCores(number) {
+  cores[0].style.background = 'black';
+  cores[0].className = 'color selected';
+  for (let index = 1; index < number; index += 1) {
+    cores[index].style.background = gerarCor();
+  }
+}
+
+function removeAllPalet() {
+  while (corPalet.lastChild.previousElementSibling) {
+    corPalet.removeChild(corPalet.lastChild);
+  }
+}
+
+function gerandoPaletCore() {
+  removeAllPalet();
+  gerarPaletCores(qtdPalet - 1);
+  gerandoBotoesCores(qtdPalet);
+  gerandoCores(qtdPalet);
+}
+
+btnGerarPalet.addEventListener('click', () => {
+  let numPaletCores = inputGerarPalet.value;
+  if (numPaletCores === '') {
+    alert('Board inválido!');
+  }
+  if (numPaletCores < minumumPalet) {
+    numPaletCores = minumumPalet;
+    inputGerarPalet.value = minumumPalet;
+  }
+  if (numPaletCores > maximumPalet) {
+    numPaletCores = maximumPalet;
+    inputGerarPalet.value = maximumPalet;
+  }
+
+  qtdPalet = inputGerarPalet.value;
+  gerandoPaletCore();
+});
+
+gerarPaletCores(qtdPalet - 1);
+gerandoBotoesCores(qtdPalet);
+gerandoCores(qtdPalet);

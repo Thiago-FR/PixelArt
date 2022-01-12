@@ -5,24 +5,48 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>Pixels-Art</title>
 </head>
 <body>
-  <h1 id="title">Paleta de Cores</h1>
-  
-  <section id="color-palette">
-    <div class="color selected"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>    
-  </section>  
-  
-  <input type="number" id="board-size" min="1">
-  <button id="generate-board">VQV</button>
-  <button id="clear-board">Limpar</button>
-  <section id="pixel-board">
-  </section>  
 
- <script src="script.js"></script> 
+  <nav id="menu-nav">
+    <a href="../../index.html">Home</a> |
+    <a href="../color-guess/index.html">color-guess</a> |    
+    <a href="../todo-list/index.html">todo-list</a> |
+    <a href="../pixels-art/index.html">paleta de cores</a> |
+    <a href="../meme-generator/index.html">meme-generator</a>
+  </nav>
+  
+  <div id="container">
+    <h1 id="title">PALETA DE CORES</h1>
+  
+    <div id="div-container">
+      <section id="color-palette">
+        <div class="color selected"></div> 
+      </section>
+
+      <section id="btn-container">
+        <div id="btn-content-gerar-cores">
+          <input type="number" id="input-gerar-palet" min="1">
+          <button id="gerar-palet" class="btn-game">Gerar Cores</button>
+        </div>
+
+        <div id="btn-content-gerar-board">
+          <input type="number" id="board-size" min="1">
+          <button id="generate-board" class="btn-game">VQV</button>
+        </div>
+
+        <div id="btn-content-clear">
+          <button id="clear-board" class="btn-game">Limpar</button>
+        </div>
+      </section>
+  
+    </div> 
+
+    <section id="pixel-board">
+    </section>  
+    
+  </div>
+  <script src="script.js"></script> 
 </body>
 </html>

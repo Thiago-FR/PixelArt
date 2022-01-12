@@ -1,21 +1,55 @@
-#color-palette {
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200&display=swap');
+
+* {
+  margin: 0;
+}
+
+button {
   width: 300px;
-  height: 150px;
-  border: 3px solid black;
+  height: 10px;
+  margin-top: 2px;
+  margin-left: 2px;
+  padding: 20px;
+  font-size: 20px;
+  line-height: 5px;
+  background-color: #eee;
+  display: block;
+}
+
+#color-palette {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 350px;
+  height: auto;
+  margin-right: 30px;
 }
 
 #pixel-board {
   border: 1px solid black;
   margin-top: 25px;
-  padding-bottom: 10px;
+}
+
+#input-gerar-palet {
+  height: 37px;
+  width: 50px;
+  display: inline-block;
+  text-align: center;
 }
 
 #board-size {
   height: 37px;
   width: 50px;
   display: inline-block;
-  padding: 4px;
   text-align: center;
+}
+
+#gerar-palet {
+  display: inline-block;
+  width: 235px;
 }
 
 #generate-board {
@@ -23,13 +57,50 @@
   width: 235px;
 }
 
+#btn-content-gerar-cores {
+  display: flex;
+  align-items: center;
+  padding: 5px 5px;
+}
+
+#btn-content-gerar-board {
+  display: flex;
+  align-items: center;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 800px;
+  background-color: rgba(38, 180, 69, 0.2);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#div-container {
+  display: flex;
+  flex-direction: row;
+  border: 3px solid rgb(0, 0, 0, .3);
+  background-color: rgb(255, 255, 255, .7);
+}
+
+#btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#btn-content-clear {
+  padding: 15px 0;
+}
+
 .pixel {
   width: 40px;
   height: 40px;
   border: 1px solid black;
   display: inline-block;
-  margin-left: 15px;
-  margin-top: 15px;
+  
   background-color: white;
 }
 
@@ -38,19 +109,60 @@
   height: 100px;
   border: 1px solid black;
   display: inline-block;
-  margin-left: 15px;
-  margin-top: 15px;
-  padding-top: 10px;
+  margin: 5px 5px;
 }
 
-button {
-  width: 300px;
-  height: 10px;
-  margin-top: 20px;
-  margin-left: 2px;
-  padding: 20px;
+.line {
+  margin: 0;
+  padding: 0;
+  height: 42px;
+}
+
+.btn-game {
+  width: 290px;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(243, 221, 97);
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 5px 5px 5px rgb(112, 107, 107);
+}
+
+.btn-game:hover {
+  background-color: rgb(214, 205, 152, .5);
+}
+
+.btn-game:active {
+  margin-left: 3px;
+  margin-top: 3px;
+  box-shadow: 2px 2px 2px rgb(112, 107, 107);
+}
+
+/* Menu Navegação */ 
+
+#menu-nav {
+  text-align: center;
+  padding: 25px 0;
+  background-color: rgb(255, 255, 255);
+}
+
+#menu-nav a {
+  font-family: 'Stick No Bills', sans-serif;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  transition: 1s;
   font-size: 20px;
-  line-height: 5px;
-  background-color: #eee;
-  display: block;
+}
+
+#menu-nav a:hover {
+  font-size: 22px;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, .05);
+  padding: 10px;
 }
