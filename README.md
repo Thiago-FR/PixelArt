@@ -15,7 +15,7 @@
 
 ---
 
-## Habilidades desenvildas <a name="habilidades"></a>
+## Habilidades desenvolvidas <a name="habilidades"></a>
 
 - Manipular o DOM
 
