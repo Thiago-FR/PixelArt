@@ -1,4 +1,4 @@
-
+[PROJETO](https://thiago-fr.github.io/PixelArt/)
 
 ## Bem vindo ao repositório do projeto Arte com Pixels! <a name="boas-vindas-ao-repositorio-do-projeto-pixels-arte"></a>
 
@@ -35,7 +35,6 @@
   * `git clone git@github.com:tryber/sd-015-a-project-pixels-art.git`
   * Entre na pasta do repositório que você acabou de clonar
 
-2. Instale as dependências e inicialize o projeto
-  * Instale as dependências:
-    * `npm install`
+2. Ou click no link abaixo e veja funcionando.
+  * [PROJETO](https://thiago-fr.github.io/PixelArt/)
 
