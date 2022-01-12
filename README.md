@@ -9,6 +9,7 @@
 
 - [Boas vindas ao repositório do projeto Trybe Wallet!](#boas-vindas-ao-repositorio-do-projeto-pixels-arte)
 - [Sumário](#sumario)
+- [Habilidades desenvolvidas](#habilidades)
 - [O que foi desenvolvido](#o-que-foi-desenvolvido)
 - [Habilidades Desenvolvidas](#habilidades)
 - [Para testar o projeto](#testar-o-projeto)
