@@ -2,7 +2,6 @@
 
 ## Bem vindo ao repositório do projeto Arte com Pixels! <a name="boas-vindas-ao-repositorio-do-projeto-pixels-arte"></a>
 
-
 ---
 
 ## Sumário <a name="sumario"></a>
@@ -11,7 +10,6 @@
 - [Sumário](#sumario)
 - [Habilidades desenvolvidas](#habilidades)
 - [O que foi desenvolvido](#o-que-foi-desenvolvido)
-- [Habilidades Desenvolvidas](#habilidades)
 - [Para testar o projeto](#testar-o-projeto)
 
 ---
@@ -38,4 +36,3 @@
 
 2. Ou click no link abaixo e veja funcionando.
   * [PROJETO](https://thiago-fr.github.io/PixelArt/)
-
